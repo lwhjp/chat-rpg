@@ -1,0 +1,45 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://ChatControl.gd" type="Script" id=1]
+
+[node name="ChatControl" type="WindowDialog"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 180.0
+margin_bottom = 100.0
+rect_scale = Vector2( 0.5, 0.5 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Loading" type="Label" parent="VBoxContainer"]
+margin_top = 62.0
+margin_right = 500.0
+margin_bottom = 76.0
+size_flags_vertical = 6
+text = "Loading..."
+align = 1
+
+[node name="Text" type="Label" parent="VBoxContainer"]
+margin_top = 143.0
+margin_right = 500.0
+margin_bottom = 157.0
+custom_colors/font_color = Color( 0, 1, 0, 1 )
+autowrap = true
+
+[node name="ReplyOptions" type="ItemList" parent="VBoxContainer"]
+margin_top = 161.0
+margin_right = 500.0
+margin_bottom = 300.0
+size_flags_vertical = 3
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+[connection signal="item_selected" from="VBoxContainer/ReplyOptions" to="." method="_on_ReplyOptions_item_selected"]
