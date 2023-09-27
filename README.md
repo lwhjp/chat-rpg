@@ -5,3 +5,7 @@ A simple demo for using ChatGPT in a Godot game.
 You need an API key for this to work.
 
 Open GPTClient.gd and update the API_KEY constant.
+
+### Screenshot
+
+![screenshot](screenshot.png)
